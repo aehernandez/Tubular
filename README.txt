@@ -1,8 +1,10 @@
-Group members:
+Group members: Alain Hernandez
 
 Brief Description of Project Goals/Features:
+YouTube to Terminal Video Player
 
 Instructions to run:
+
 
 Requirements Met:
   Custom class:
