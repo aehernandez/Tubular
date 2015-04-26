@@ -16,11 +16,21 @@ import argparse
 
 class Player():
     MAX_BUF_SIZE = 100
+    """Maximum number of frames that can be printed to the stdout buffer before
+    being cleared.
+    """
+
     MAX_WIDTH = 120
+    """Upper limit on how wide all text/graphics drawn to the terminal
+    screen will be.
+    """
 
     def __init__(self, query=None):
         self.videos = []
+        """Path of downloaded videos."""
         self.results = None
+        """Results of the last video query."""
+
         if query is not None:
             self.search(query)
 

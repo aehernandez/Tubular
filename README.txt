@@ -11,11 +11,14 @@ Make sure other dependencies are installed
 
 Requirements Met:
   Custom class:
+   Player()
 
   Three Modules:
     1 -> requests
-    2 -> 
-    3 ->
+    2 -> re (regular expressions) 
+    3 -> cv2 (openCV)
 
    Custom Decorator or Generator function:
+    Custom generator is defined with the Player class. It allows the user to
+    iterate over all of the results found by the last search query.
    
