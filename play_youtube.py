@@ -1,14 +1,19 @@
-from fabulous import image as fi, utils
-import fabulous.color as color
+from fabulous import image as fi, color, utils
+
 import pafy
+
 import cv2
 import Image
 from StringIO import StringIO
+
 import sys
 import os
+
 import requests
 import re
 import textwrap
+
+import atexit
 
 MAX_BUF_SIZE = 100
 MAX_WIDTH = 120
@@ -24,8 +29,6 @@ def play(path):
     count = 0
 
     vid = cv2.VideoCapture(path)
-
-    # Initialize the display
 
     while(vid.isOpened()):
         # Read the frame
@@ -69,6 +72,12 @@ def get_results(search):
     results = re.findall(r'href=\"\/watch\?v=(.{11})', r.content)
     return results[::2]
 
+def cleanup():
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+
 if __name__ == '__main__':
     results = get_results(sys.argv[1])
     for i in range(3):
@@ -83,6 +92,8 @@ if __name__ == '__main__':
             pass
         if selected > 0 and selected < 4:
             check = False
+
+    atexit.register(cleanup)
 
     path = download(results[selected-1])
     os.system('cls' if os.name == 'nt' else 'clear')
