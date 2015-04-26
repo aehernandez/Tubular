@@ -1,3 +1,4 @@
--e git+https://github.com/aehernandez/fabulous#egg=fabulous 
 Pillow
 pafy
+-e svn+http://grapefruit.googlecode.com/svn/trunk/#egg=grapefruit
+-e git+https://github.com/aehernandez/fabulous#egg=fabulous 
