@@ -157,4 +157,4 @@ if __name__ == '__main__':
         if selected > 0 and selected < 4:
             check = False
 
-    player.quick_play(selected)
+    player.quick_play(selected-1)
