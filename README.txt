@@ -1,7 +1,8 @@
-***Tubular, a YouTube to Terminal Video Player
+Tubular, a YouTube to Terminal Video Player
 
 Dependencies:
-====
+======
+
 Make sure opencv is installed
     apt-get install libopencv-dev python-opencv
 Make sure other dependencies are installed
