@@ -1,9 +1,7 @@
-Group members: Alain Hernandez
+***Tubular, a YouTube to Terminal Video Player
 
-Brief Description of Project Goals/Features:
-YouTube to Terminal Video Player
-
-Instructions to run:
+Dependencies:
+====
 Make sure opencv is installed
     apt-get install libopencv-dev python-opencv
 Make sure other dependencies are installed
@@ -14,17 +12,3 @@ Where [query] is a string representing a YouTube video search query.
 For example 'python tubular.py "upenn grasp"' could be run.
 The top three results will be shown. Type 1, 2, or 3 to select the video you
 want to play and then hit enter. Enjoy the video!
-
-Requirements Met:
-  Custom class:
-   Player()
-
-  Three Modules:
-    1 -> requests
-    2 -> re (regular expressions) 
-    3 -> cv2 (openCV)
-
-   Custom Decorator or Generator function:
-    Custom generator is defined with the Player class. It allows the user to
-    iterate over all of the results found by the last search query.
-   
